@@ -1,0 +1,30 @@
+Java works on concept of packages. Ex: 
+
+If we look at folder structure of Oops for Inheritance folder its
+
+JAVA-> Oops -> Inheritance -> 2 classes (Calculator & AdvancedCalculator)
+
+So if we want to create an object of say Calculator.java we need to have it imported from package i,Ex
+
+
+package JAVA.Oops.Inheritance.Calculator
+
+similarily if we want to create or use AdvancedCalculator we need to import it like.
+
+package JAVA.Oops.Inheritance.AdvancedCalculator
+
+
+Now in case if we want all the files inside a folder we can use a short hand like:
+
+package JAVA.Oops.Inheritance.*
+
+This short hand is applicable for all files inside a folder and not all folders inside a folder.
+
+Now in java everything is within a package.
+
+Ex: System.out.println
+
+System is also a part of package as its a class thus we need to take it from a package.
+
+Bydeafult package java.lang; is always imported for all .java files being created and thus this System class is also coming
+from there only.

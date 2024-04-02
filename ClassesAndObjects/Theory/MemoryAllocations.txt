@@ -1,0 +1,113 @@
+So previously in addTwo numbers we created a main method in class AddTwoNumbers and we had a sepearte class Calculate
+which was having a method add and code looks like this:
+
+class Calculate {
+    int variable = 1;
+    public long add(long x, long y) {
+        return x + y;
+    }
+}
+
+public class AddTwoNumbers {
+    public static void main(String[] args) {
+        long a = 12;
+        long b = 13;
+        Calculate calc = new Calculate();
+        System.out.println(calc.add(a, b));
+    }
+}
+
+So lets understand whats actually happening behind the scenes.
+
+We have a JRE which is having a JVM , Java virtual machine is the machine where actually this code is running. Inside JVM we
+have two type of memories that is a stack memoery and a heap memory.
+
+1. Stack memory.
+2. Heap memory.
+
+All the methods forms an individual stack ex this program execution starts from main so we will have a stack for main.
+
+Now a stack is having the local varibales to the function whose stack it is and the value of these local varibales.
+
+For ex: First we will have a main stack which have one local varibale a with value 12 and another local varibale b with
+value 13
+
+  main
+
+|       |
+|b = 13 |
+|a = 12 |       Stack memoery
+|_______|
+
+Now Calculate calc  = new Calculate(); means calc is a refernce varibale which will be refrencing to the memory location
+of an object of Calculate and this object will be created in heap memoery. However this calc refrence variable is a local
+varibale to main stack and thus it will be present in main stack.
+
+  main
+
+|calc=1001|
+|b = 13   |           Stack memory
+|a = 12   |
+|_________|
+
+Now in heap memoery we have created a obj of calculate and thus in stack of main this calc refrence varibable will be
+pointing towrds the object of this class calculate.
+
+Now this in heap will be having 2 things
+1. All instance varibales , so in our case Calcuate class is having one instance varibale int variable = 1; and it will be 
+there 
+2. It will be having only method defintion of all the class methods.
+
+So ideally a in head memory it will look like
+
+
+   1001
+  
+|variable=1   |
+|____________ |             Heap Memory
+|   add()     |
+|_____________|
+
+
+
+Now we do calc.add(a,b);
+
+So there is a method call and since heap memory only have method defintion so a new stack will be created in stack memory
+for method add and again justlike main stack it will have its local varibales.
+
+ add
+
+|         |
+|x = 13   |           Stack memory
+|y = 12   |
+|_________|
+
+Since value are being provided by main stack call to the local varibale of add method x and y , thus these values will
+get stored.
+
+After the method execution is successful the stack corresponding to that function/method gets destroyed.
+
+So overall it loook like:
+
+                                                JVM                                        1001
+
+                                                                                       |variable=1   |
+                                                                                       |____________ |   Heap Memory
+                                                                                       |   add()     |
+    add                                                                                |_____________|
+|         |                                                                        
+|x = 13   |           Stack memory
+|y = 12   |
+|_________|
+|
+|
+|
+|
+|
+|  main
+|calc=1001|
+|b = 13   |       Stack memory
+|a = 12   |
+|_________|
+|
+|___________________________________________________________________________________________________________________________

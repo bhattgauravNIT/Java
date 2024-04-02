@@ -1,0 +1,39 @@
+So when we were installing java we installed jdk 1.8. Now why?
+
+So lets talk about js, so once we complie a js it says run it on a server so we simply open google chrome now chrome has
+a run time for js which is V8 and thus is was able to run javascript. Say when we try to run typescript it again open a server
+now it first comples it into a js and send it to server 4200 and when we open it in browser it has a run time and thus it was able
+to understand js.
+
+So for any language to run we need a run time. Say for ex when we run js in server, we need node.js and its a run time for js
+on server side.
+
+Now the same thing is needed by java.
+
+Thus when we installed jdk so it was comprising of:
+
+1. JRE (Java run time)
+                      -> JRE is having a JVM (java virtual machine)
+                      -> Libraries
+                      -> Complier
+            
+Now lets understand how things works here.
+
+First we have a hardware say a laptop on top of it there is a Os say windows or mac. On top we install a JDK now a JDK is having a JRE which is a
+run time of java. Further more a JRE is having some libraries needed and a JVM which is a java virtual machine.
+
+As soon as we write a java code and say we complie it using javac className.java or the compiler of say IDE complies it using the 
+same comlier javac which gets installed once we have jdk so a className.class file gets generated automatically which is nothing but a byte code 
+this byte code or className.class file is understandable by the JVM, so in order to invoke this we do java className or use IDE to do it and thus it runs successfully.
+
+Now lets say we have a bigProject consisting of many java files so there has to be a entry point from where the JVM starts compling the project , similar
+to this is in Angular we start from main.ts which inturns invoke app.module.ts and thus appComponent is the first component.
+
+So the role of main.ts in angular was to provide a entry point to the project in the same way a class with 
+
+public static void main (String args[]) {} method is the main class from which things start.
+
+Since java is purely object oriented and thus this public static void main (String args[]) {} method is wrapped within a main class.
+ 
+So once a java code is ready say in my pc anyone or any pc having JRE that is java run time can simply run it and thus its platform
+independent.

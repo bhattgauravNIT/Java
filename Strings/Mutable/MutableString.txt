@@ -1,0 +1,32 @@
+So previously we read that why strings in java are immutable so we need something to make them mutable in case we need
+mutability and that comes with string buffer and string builder classes in java.
+
+The only differnce between string buffer and string builder is that string buffer is thread safe whereas string builder 
+is not thread safe.
+
+StringBuffer str = new StringBuffer("Gaurav");
+StringBuilder str1 = new StringBuilder("Gaurav");
+
+Clearly we have created two reference varibales str and str1 which will be storing the object address that will be created
+in the heap memeory.
+
+In String buffer there is always a buffer capacity of 16 which it provides to us and once its reached
+it will double that , a similar kind of dynamic array.
+
+Ex: StringBuffer 
+str = new StringBuffer("");
+str.capacity()
+
+So it will be 16 now say 
+str.append("GauravGauravGaurav");
+System.out.println(str.capacity());
+
+Now capacity will be doubled to 32 now as initial capacity limit we have reached.
+
+similar In String builder there is always a buffer capacity of 22 which it provides to us and once its reached
+it will double that , a similar kind of dynamic array.
+
+StringBuilder str1 = new StringBuilder("Gaurav");
+System.out.println(str1.capacity());
+str1.append("GauravGauravGauravGaurav");
+System.out.println(str1.capacity());

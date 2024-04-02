@@ -1,0 +1,48 @@
+So String in java is a class and we can create string via 2 ways in java i,e 
+
+String str = new String("Gaurav");
+String str1 = "Bhatt";
+
+1. We can use new key word like String str = new String("Gaurav");
+ 
+ str acts as an reference variable in stack memeory having the value of address location of a new object of String class
+ which gets formed in the heap memeory. 
+ It has nothing to do with string pool memory (which is a special memory area inside heap).
+ Concept here remains same just like the creation of objects in java in heap memory.
+
+ 2. String str1 = "Bhatt";
+
+ Now what happens here is str1 acts as an refernce varibale which gets created inside stack however this time a new object of String class
+ is not formed in heap. However in the string pool (which is a special memory location in heap) it sees if string pool is already having a object
+ with value Bhatt (case sensitive) if yes it assigns the memory location of that string pool address location to str1.
+
+ If there is no value Bhatt(case sensitive) in string pool it will create Bhatt in string poool and will assign the address of that to str1.
+
+
+ Lets say if we do
+        str1 = str1+ "Baba";
+
+Now in the string pool it checks for Bhatt Baba value , since its not there thus it will create a new value inside string pool and Now
+will update the str1 refernce variable address in stack to this newely created entry in string pool.
+
+What happens to the value of Bhatt now which is also in string pool.
+So there is no varibale addressing to the memroy location of Bhatt in string pool and thus its eligible for garbage collection.
+
+ex: String name = "Pankaj";
+    String name1 = "Pankaj";
+
+Now in two reference varibales gets created in the stack memory namely name and name1.
+Now initally considering string pool is empty. Now name  = "Pankaj" it creates a new object in string pool with value "Pankaj" and the
+memory address of this gets stored as the value of the reference varibale in stack (name).
+
+
+Now for name1 = "Pankaj" since string pool is already having pankaj so it will not create another pankaj value however will directly assign
+the memory address location of Pankaj in string pool to reference varibale name1 in stack memory.
+
+Since the original string never gets modified and whenever we change the string a new entry in the string pool gets created and the reference
+varibale address in stack memory gets updated, and previous value entry gets eligible for garbage collection we say that strings in java is
+immutable.
+
+
+However there are ways of creating mutable strings in java i,e using String builder and String buffer class.
+

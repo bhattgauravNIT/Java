@@ -1,0 +1,41 @@
+There are 4 access modifiers namely
+
+1. Deafult
+2. Private
+3. Public
+4. Protected
+
+Say ex:
+
+
+1. public class A {
+     int name;
+}
+
+Since we have not mentioned anything its by default a default access modifier and it can be accessed in the same package.
+So all the files (java files) which are in the same package can have access to this name once they create an object of class A.
+
+
+2. Private
+
+public class A {
+    private name;
+}
+
+Now this private varibale will only have access in the same class rest no where.
+
+3. Public 
+
+public class A {
+    public name;
+}
+
+This public varibale will have access everywhere that is even from other packages.
+
+4. Protected
+
+public class A{
+    protected name;
+}
+
+This protected varibale will only have access in the subClasses.

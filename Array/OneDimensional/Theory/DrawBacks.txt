@@ -1,0 +1,11 @@
+Array in java are very good but there are some drawbacks.
+
+1.Suppose i have created a int type array but i want to store strings as well along with int and say float and booleans as well
+this is not possible with arrays.
+
+2. Supoose i have created a array of size 4 using int arr[] = new int[4].
+
+As soon as a new keyword is used it resembles an object and arr will be the refrence varibale stored in stack of function'
+and pointing towrds this array which will get created in the heap memory.
+
+So once a size is initialized we cant exceed it and it make it static sized array and thus it poses a disadvantage.
