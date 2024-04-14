@@ -1,0 +1,34 @@
+When we have multiple threads say two threads and both these threads are trying to access a mutable member at a same time
+then it will cause problems for example :
+
+int a= 5;
+
+a++;
+
+Now if we say when thread1 is accessing a then thread two wont access a so say thread1 accessed a it incremented a 
+a beacomes 6 now only thread2 access a so it will operate upon new value of a which is 6.
+
+However if at same time both thread1 and thread2 are accessing a then both will make a as 6 and then if tread1 only opearte on it
+a will be operated which is 6 and thread 1 makes it 7.
+
+Now thread 2 workds on 7 make it 8.
+
+But again at 8 both thread simultanously worked on 7 making at 8 only but ideally if thread would have
+operated upon it seperately a value would have been 9 now.
+
+Thats the problem which arise in race condition and thus mutable with thread is dangerous option.
+
+Its the same example that we have a bank account with say 10000 ruppes and having 2 cards now at the same time exact same moment
+both the cards are trying to take out ruppess 7000 but total balance is 10K only and at same time two 7k withdrawls will sum 
+up to 14k thats the problem.
+
+
+So solution is 
+1. Either work with immutable data members or 
+2. If working with mutable datamembers in a method make those methods thread safe.
+
+If we ideally are working with immutable datamembers those are thread safe and second option is to make those methods
+which are working with mutable objects as thread safe.
+
+Thread safety means no two threads can access the same member which is working with mutable data member at same time and thus
+has to wait till current thread stops its work.

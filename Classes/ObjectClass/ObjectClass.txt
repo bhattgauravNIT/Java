@@ -1,0 +1,45 @@
+By default a class will always extend Object class if in case its not extending any other class.
+Ex:
+
+class A {
+
+}
+
+public class ObjectClass {
+    public static void main(String[] args) {
+        A obj = new A();
+        System.out.println(obj.toString());
+
+    }
+
+}
+
+
+We have not defined anything in class A but still when we created an object of class A and tried doing obj.toString() how does 
+it was able to pick toString() method.
+
+Thid happened beacuse this class A is extending ObjectClass of java.
+
+So internally its something like 
+
+class A extends Object{
+
+}
+
+public class ObjectClass {
+    public static void main(String[] args) {
+        A obj = new A();
+        System.out.println(obj.toString());
+    }
+}
+
+Now the great point is whenever we try and print the obj is by default calls the toString method of Object class and thus it returns
+some hashCode .
+However yes we can override even this method in our class A and have use some hashing algo to may be generate some hashCode or 
+even print anything we want.
+
+Now when we do obj1.equals(obj2) it compares these hashCode and thus return true or false.
+So if in case I have two objects obj1 & obj2 and i say obj1.equals(obj2) it will be false beacuse the
+hash generated will be different.
+
+ So overall Object class is the universal class.

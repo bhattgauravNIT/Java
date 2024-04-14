@@ -1,0 +1,38 @@
+So before jumping to exceptions lets talk about errors so there are basically 3 type of errors:
+
+1. Complie Time errors
+2. Run Time errors
+3. Logical errors.
+
+Compile time error:
+        These are the errors which are caught at compliation time only for ex:
+        If i write System.out.Println(); instead of System.out.println() which is the correct syntax 
+        thus this falls under the category of complie time error.
+
+Logical Error:
+       Suppose we wish to perform operation of say 2 numbers but however the value which our program is giving is
+       is not same as what we are expecting so clearly there is a logical error in our code.
+
+RunTime error:
+       Lets take an example say we want to write to a file say abc.txt till first 7 days we had this file in our harddisk
+       but however somehow on the 8th day it got deleted, then when the complier is trying to access this file it
+       wont be able to find this file.
+       This will be a run time error.
+
+       Although we can have precautionary checks whether this file exists or not if not dont perform this operation
+       but if we failed to have a check than it will result in an run time error.
+
+       Generally run time errors are termed as exceptions.
+       And thus we should handle exception.
+
+       Ex: Divide by 0 can run to a exception and needs to be handled via airthmetic exception.
+
+       A run time exception may lead to stoppage of the program which is dont want.So we handle them
+
+
+A error is generally something which we cant handle for example apart from this syntatical errors we can face
+many more other errors as well say I/O error or say MemoryLimitExceed errors or deadThread
+such errors while coading we cant handle thus in general we say that errors are unhandleable.
+
+Exceptions are generally something which we can handle and thus exceptions are handled.
+Ex: ArrayIndex out of bound, Null Pointer exception, Airthmetic exception.

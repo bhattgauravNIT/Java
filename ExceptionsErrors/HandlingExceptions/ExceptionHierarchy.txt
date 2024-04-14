@@ -1,0 +1,21 @@
+At top we have object class then we have throwable class
+
+                                       object
+                                         |
+                                      throwable
+                                     ____|______
+                    Error                            Exceptions
+                                                        |   (Run time exception)                 | (sql exceptions)
+                1. I/O Error                         1. Airthmetic exceptions
+                2. MemeoryLimit Error                2. Null pointer exceptions
+                3. DeadThreadError                   3. Array out of bound exception
+
+
+All exceptions extends exception class.
+
+So exceptions all have various kinds of exceptions like runTime or sqlException.
+
+ALl run time exceptions falls under unchecked category where as others like sql exceptions etc falls under checked category.
+
+So unchecked are those which are not necessary to be handled however check exceaptions like sql exceptions falls under
+checked exception categpry and thus they need to be handled compulsarily at all cost.

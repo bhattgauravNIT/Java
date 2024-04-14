@@ -1,0 +1,30 @@
+So a thread during its entire life cycle has certain states which are know as thread states.
+
+             new()
+      New    ------->            (start())
+                                 Runnable                          (wait(), sleep())
+                                                                      Waiting   
+ 
+                                 Running                        
+
+
+                                                        (stop())
+                                                          Dead
+
+
+So these are the various stages of a thread.
+
+1. New : When we create a thread its a new state for a thread. For example when we say Thread t1 = new Thread();
+
+2. Runnable: When the thread is ready to run but its waiting for the scheduler to schedule it according to the traffic
+and send it to the running state is called Runnable state.
+
+3. When the thread reaches the CPU and is running in CPU is called running state.
+
+4. Supoose after running for certain time in CPU it is being sent back to witing state as other threads also needs some 
+time , this state is witing thread.
+
+5. Once wait is over it goes back to runnable state where the scheduler of OS and schedules it and then send it to CPY in 
+running state.
+
+6. Once the task is over the thread stops and achieve dead state.

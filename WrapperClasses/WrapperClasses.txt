@@ -1,0 +1,28 @@
+In java there are some primitive dataTypes, primitive in the sense they are not objects and nethier they are classes, 
+so it will be right to say that these are simply dataType like in any other language and thus java is not 100% objects
+oriented.
+
+If i say 
+
+int num = 4.
+
+So it create me a num varibale of type int with a value 4 and there num varibale is a primitive varibale and not a reference
+varibale as its not storing any refernce of object in heap.
+
+However java provides liverage to wrap any primitive datatype as a class object and even to wrap any class object into a 
+primitive datatype.
+
+This wrapping of primitive dataType to an class object is class boxing and such classObjects to which a primitive datatype
+is being wrapped upon are called wrapper classes.
+
+Ex: 
+
+Primitive               Wrapper class
+
+int                      Integer
+double                   double
+float                    float
+boolean                  Boolean.
+
+
+When java takes care of this wrapping and unwrapping automatically such situations arte known as autoBoxing and autoUnboxing.

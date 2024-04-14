@@ -1,0 +1,26 @@
+Collection is an interface.
+
+The hierarchy comes under like:
+
+
+                                            Collection
+                     Map                |             |                |       
+                      HashMap           List         Set             Queue
+
+                                  ArrayList    HashSet         Deque
+                                  LinkedList                   PriorityQueue
+
+
+So collection is an inteface now there are other iterfaces like List, Set, Queue which implements this inteface .
+
+Collections however refers to classes which implements inteface like List, Set , Queue.
+
+
+So In interfaces like list there exists classes which implements these interfaces like ArrayList, LinkedList.
+For set its like HashSet,TreeSet etc.
+For queue its like Deque, PriorityQueue.
+
+A map is a inteface however it does not implements Collection inteface and thus its a kind of seperate inteface and the classes
+implementing this interface is HashMap, TreeMap etc.
+
+

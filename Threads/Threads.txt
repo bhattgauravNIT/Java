@@ -1,0 +1,25 @@
+So basically there is a Hardware on top of that we have a os and on top of that we have our software.
+
+In real life there are multiple softwares running at the same time for example we can see in task manager that multiple
+softwares are running at same time.
+
+This is called as multi Tasking.
+
+Now in Hardware there is CPU which is responsible for all type of logical computation 
+however lets say a software is running so it will run on OS so therefore if its requesting a thread for it it has to 
+go through os and the os is responsible for schedling.
+
+Say ex a request of 500 threads comes in , in which one software may be using one thread or multiple threads.
+
+For ex: Vs code is one software but it can use multiple threads at same time for ex: we are typing as well as vs code'
+is compiling simplutaneously and say throwing error on some syntax so it can use multiple threads.
+Similarly chrome we are opening multiple tabs in it and one is youtube so laptop is now playing music even while
+we are browing through other tabs so even chrome i,e a single software is using multiple threads.
+
+Now coming back to schedling since we have an i7 this means our processor is capable of handling 7 threads
+at a same time . 
+
+So say the scheduler schedules 7 threads at same time and send them to CPU for processing but still 500-7 threads
+is awaiting thus scheduler schedules them based on some time.
+
+This is concepts of threads.
